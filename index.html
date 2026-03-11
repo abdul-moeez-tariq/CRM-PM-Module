@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="./css/output.css" rel="stylesheet" />
+  <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css"
+    />
+ 
+  <title>Dashboard</title>
+</head>
+ 
+<body class="bg-primary font-poppins">
+ 
+  <!-- Header -->
+  <header id="layout-header" class="w-full h-[10vh] fixed top-0 z-50 bg-secondary"></header>
+ 
+  <main class="mt-[10vh] flex w-full  max-h-[calc(100vh-10vh)] overflow-hidden">
+ 
+   <!-- Sidebar -->
+   <aside id="layout-sidebar"
+  class="fixed top-[10vh] max-h-[calc(100vh-10vh)] left-0 h-full w-64 bg-secondary z-50
+         transform transition-transform duration-300
+         xl:translate-x-0 -translate-x-full">
+</aside>
+ 
+    <!-- Content -->
+    <div id="layout-content"
+      class="lg:ml-64 p-6 w-full flex-1 overflow-y-auto custom-scrollbar">
+    </div>
+ 
+  </main>
+ <div id="globalLoader"
+     class="hidden fixed inset-0 z-[9999] flex items-center justify-center backdrop-blur-sm bg-black/20">
+
+  <div class="loader-circle">
+    <span style="--i:0"></span>
+    <span style="--i:1"></span>
+    <span style="--i:2"></span>
+    <span style="--i:3"></span>
+    <span style="--i:4"></span>
+    <span style="--i:5"></span>
+    <span style="--i:6"></span>
+    <span style="--i:7"></span>
+    <span style="--i:8"></span>
+  </div>
+
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="./js/main.js"></script>
+ 
+  <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+ 
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+</body>
+</html>
+ 

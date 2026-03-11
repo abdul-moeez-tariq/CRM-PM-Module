@@ -1,0 +1,79 @@
+<div class="w-full flex-1 max-h-[calc(100vh-10vh)] overflow-y-auto">
+
+  <!-- Header -->
+  <div class="p-6 w-full mx-auto bg-secondary">
+    <div class="flex justify-between items-center">
+      <div>
+        <h2 class="text-2xl font-semibold text-blue">Notifications</h2>
+        <p class="text-sm text-gray-500">
+          View and manage all your system and activity notifications.
+        </p>
+      </div>
+
+      <div class="flex gap-4">
+        <button id="markAllBtn"
+          class="px-4 py-2 text-sm text-blue-600 border rounded-lg">
+          Mark all as read
+        </button>
+
+        <button id="clearAllBtn"
+          class="px-4 py-2 text-sm text-red-600 border rounded-lg">
+          Clear all
+        </button>
+      </div>
+    </div>
+
+    <!-- Search + Filter -->
+    <div class="mt-6 flex items-center justify-between gap-2 w-full">
+
+      <!-- Search -->
+      <div class="relative flex-1">
+        <input type="text"
+          id="searchInput"
+          placeholder="Search notifications..."
+          class="w-full pl-4 pr-3 py-2 text-sm border rounded-md bg-gray-50 focus:outline-none">
+      </div>
+
+      <!-- Dropdown -->
+      <div class="relative notification-dropdown">
+            <input id="filterInput" type="text" readonly value="All Notifications"
+              class="w-full cursor-pointer rounded-md border border-gray-300 px-4 py-2 text-sm focus:outline-none dropdown-btn" />
+            <!-- Arrow -->
+            <svg
+              class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 transition-transform duration-300 transform svg"
+              width="18" height="18" viewBox="0 0 18 18">
+              <path
+                d="M15.2241 7.34982L9.59912 12.9748C9.52073 13.0535 9.42759 13.1159 9.32503 13.1585C9.22247 13.2011 9.11251 13.223 9.00146 13.223C8.89041 13.223 8.78046 13.2011 8.6779 13.1585C8.57534 13.1159 8.48219 13.0535 8.40381 12.9748L2.77881 7.34982Z"
+                fill="#6B7280" />
+            </svg>
+            <ul
+              class="absolute z-10 mt-1 w-full rounded-md border border-gray-400 bg-gray-100 text-sm overflow-hidden dropdown"
+              style="max-height: 0; opacity: 0; transition: all 0.3s ease;">
+              <li onclick="selectOption('All Notifications')"
+                class="px-4 py-2 border-b border-gray-400 hover:bg-green-100 text-gray-500 hover:text-blue-500 cursor-pointer">
+                All Notifications
+              </li>
+              <li onclick="selectOption('Recent')"
+                class="px-4 py-2 border-b border-gray-400 hover:bg-green-100 text-gray-500 hover:text-blue-500 cursor-pointer">
+                Recent
+              </li>
+              <li onclick="selectOption('Last Week')"
+                class="px-4 py-2 border-b border-gray-400 hover:bg-green-100 text-gray-500 hover:text-blue-500 cursor-pointer">
+                Last Week
+              </li>
+              <li onclick="selectOption('Last Month')"
+                class="px-4 py-2 border-b border-gray-400 hover:bg-green-100 text-gray-500 hover:text-blue-500 cursor-pointer">
+                Last Month
+              </li>
+            </ul>
+          </div>
+
+    </div>
+  </div>
+
+  <!-- Notifications List -->
+  <div class="p-6 w-full bg-gray-50">
+    <div id="notificationList" class="space-y-3"></div>
+  </div>
+
+</div>
