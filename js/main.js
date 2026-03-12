@@ -15,6 +15,15 @@ import { initTaskMultiDropdown } from "./addNewTask.js";
 import { initTaskFileUpload } from "./addNewTask.js";
 import { initTaskFormValidation } from "./addNewTask.js";
 
+import { initTimelineDropdowns } from "./timeline.js";
+import { initCalendarTabs } from "./timeline.js";
+import { initDeleteTimelineModal } from "./timeline.js";
+
+import { initNewTimelineDropdowns } from "./addNewTimeline.js";
+import { initTimelineMultiDropdown } from "./addNewTimeline.js";
+import { initTimelineFileUpload } from "./addNewTimeline.js";
+import { initTimelineFormValidation } from "./addNewTimeline.js";
+
 const content = document.getElementById("layout-content");
 
 // 🔹 Load Layout Once
@@ -49,6 +58,19 @@ function runPageJS(page) {
     initTaskMultiDropdown();
     initTaskFileUpload();
     initTaskFormValidation();
+  }
+
+  if (page === "timeline") {
+    initTimelineDropdowns();
+    initCalendarTabs();
+    initDeleteTimelineModal();
+  }
+
+  if (page === "addNewTimeline") {
+    initNewTimelineDropdowns();
+    initTimelineMultiDropdown();
+    initTimelineFileUpload();
+    initTimelineFormValidation();
   }
 }
 
