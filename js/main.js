@@ -10,19 +10,37 @@ import { initMultiDropdown } from "./addNewProject.js";
 import { initFileUpload } from "./addNewProject.js";
 import { initProjectFormValidation } from "./addNewProject.js";
 
+// addNewTask
 import { initTaskDropdowns } from "./addNewTask.js";
 import { initTaskMultiDropdown } from "./addNewTask.js";
 import { initTaskFileUpload } from "./addNewTask.js";
 import { initTaskFormValidation } from "./addNewTask.js";
 
+// timeline
 import { initTimelineDropdowns } from "./timeline.js";
 import { initCalendarTabs } from "./timeline.js";
 import { initDeleteTimelineModal } from "./timeline.js";
 
+// addNewTimeline
 import { initNewTimelineDropdowns } from "./addNewTimeline.js";
 import { initTimelineMultiDropdown } from "./addNewTimeline.js";
 import { initTimelineFileUpload } from "./addNewTimeline.js";
 import { initTimelineFormValidation } from "./addNewTimeline.js";
+
+// calender
+import { renderCalendar } from "./calendar.js";
+
+// addNewEvent
+import { initEventDropdowns } from "./addNewEvent.js";
+import { initEventMultiDropdowns } from "./addNewEvent.js";
+import { initEventFileUpload } from "./addNewEvent.js";
+import { initEventFormValidation } from "./addNewEvent.js";
+
+// addNewAttachment
+import { initAttachmentFileUpload } from "./addNewAttachment.js";
+import { initAttachmentDropdowns } from "./addNewAttachment.js";
+import { initAttachmentMultiDropdowns } from "./addNewAttachment.js";
+import { initAttachmentFormValidation } from "./addNewAttachment.js";
 
 const content = document.getElementById("layout-content");
 
@@ -46,6 +64,7 @@ function runPageJS(page) {
     initDelete();
   }
 
+  // addNewProject
   if (page === "addnewproject") {
     initDropdowns();
     initMultiDropdown();
@@ -53,6 +72,7 @@ function runPageJS(page) {
     initProjectFormValidation();
   }
 
+  // addNewTask
   if (page === "addNewTask") {
     initTaskDropdowns();
     initTaskMultiDropdown();
@@ -60,17 +80,40 @@ function runPageJS(page) {
     initTaskFormValidation();
   }
 
+  // timeline
   if (page === "timeline") {
     initTimelineDropdowns();
     initCalendarTabs();
     initDeleteTimelineModal();
   }
 
+  // addNewTimeline
   if (page === "addNewTimeline") {
     initNewTimelineDropdowns();
     initTimelineMultiDropdown();
     initTimelineFileUpload();
     initTimelineFormValidation();
+  }
+
+  // calender
+  if (page === "calender") {
+    renderCalendar();
+  }
+
+  // addNewEvent
+  if (page === "addNewEvent") {
+    initEventDropdowns();
+    initEventMultiDropdowns();
+    initEventFileUpload();
+    initEventFormValidation();
+  }
+
+  // addNewAttachment
+  if (page === "addNewAttachment") {
+    initAttachmentFileUpload();
+    initAttachmentDropdowns();
+    initAttachmentMultiDropdowns();
+    initAttachmentFormValidation();
   }
 }
 
